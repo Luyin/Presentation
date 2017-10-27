@@ -200,6 +200,78 @@
 						<p class="fragment">MPEG-LA, Via Licensing Pool</p>
 					</section>
 				</section>
+				<section>
+					<section>
+						<h4>Subject 5</h4>
+						<h2>JVT 제안 기술 테스트</h2>
+					</section>
+					<section>
+						<h2>제안 기술에 대한 검증</h2>
+						<p class="fragment">1. 참조 소프트웨어(앵커) 제공</p>
+						<p class="fragment">2. 앵커를 기반으로 제안 기술 구현</p>
+						<p class="fragment">3. 공통 실험 조건에서 테스트</p>
+						<p class="fragment">4. RD곡선 분석</p>
+					</section>
+					<section>
+						<h2>참조 소프트웨어</h2>
+						<p class="fragment">H.264/AVC용, JM Software</p>
+						<p class="fragment">Encoder, Decoder 탑재</p>
+						<p class="fragment">YUV파일 -> 264파일로 변환</p>
+						<p class="fragment">결과 보고서 출력</p>
+					</section>
+					<section>
+						<h2>공통 실험 조건</h2>
+						<p>시퀀스들로 구성</p>
+						<table>
+							<thead>
+							<tr>
+								<th>시퀀스</th>
+								<th>해상도</th>
+								<th>프레임수/초(FPS)</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>F1 Car</td>
+								<td>720x576</td>
+								<td>25</td>
+							</tr>
+							<tr>
+								<td>Bootball</td>
+								<td>720x480</td>
+								<td>30</td>
+							</tr>
+							<tr>
+								<td>Canoa Valesia</td>
+								<td>720x480</td>
+								<td>25</td>
+							</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h3>RD곡선</h3>
+						<p>Rate-Distortion 곡선</p>
+						<p><img src="images/PSNR-Bitrate.png" style="background: transparent;"></p>
+						<p>가로: Bitrate, 세로: PSNR-Y</p>
+						<p>Bitrate 변화에 따른, 화질 손실 정보</p>
+					</section>
+					<section>
+						<h3>BD-Bitrate</h3>
+						<p>X축 방향으로 평가</p>
+						<p><img src="images/BD-Bitrate.png" style="background: transparent;"></p>
+						<p>동일한 PSNR-Y 대비 작은량의 Bitrate값 사용</p>
+					</section>
+					<section>
+						<h3>BD-PSNR</h3>
+						<p>Y축 방향으로 평가</p>
+						<p><img src="images/BD-PSNR.png" style="background: transparent;"></p>
+						<p>동일한 Bitrate 대비 좋은 PNSR-Y</p>
+					</section>
+				</section>
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+				</section>
 			</div>
 		</div>
 
