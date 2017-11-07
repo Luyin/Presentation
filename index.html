@@ -29,7 +29,7 @@
 				</section>
 				<section>
 					<section style="text-align: center">
-						<h3>Web RTC란?</h3>
+						<h2>Web RTC란?</h2>
 					</section>
 					<section style="text-align: center">
 						<p>Web Real Time Communication</p>
@@ -41,7 +41,7 @@
 				</section>
 				<section>
 					<section style="text-align: center">
-						<h3>Web RTC로 가능한 모든것</h3>
+						<h2>Web RTC로 가능한 모든것</h2>
 					</section>
 					<section style="text-align: center">
 						<p>Live 미디어 서비스</p>
@@ -52,35 +52,137 @@
 				</section>
 				<section>
 					<section style="text-align: center">
-						<h3>Web RTC 특징</h3>
+						<h2>Web RTC 특징</h2>
 					</section>
 					<section style="text-align: center">
-						<h4>Web RTC 장점</h4>
+						<h3>Web RTC 장점</h3>
 						<p class="fragment">별도의 플러그인 없이 미디어 통신 가능</p>
 						<p class="fragment">ActiveX / NPAPI / PPAPI 미사용 </p>
 						<p class="fragment">1. 보안 이슈 X</p>
 						<p class="fragment">2. 플러그인 유지 보수 X</p>
 					</section>
 					<section style="text-align: center">
-						<h4>Web RTC 단점 1</h4>
+						<h3>Web RTC 단점 1</h3>
 						<p class="fragment">별도의 서버 운영 필요</p>
 						<p class="fragment">1. Signaling 서버 (필요)</p>
 						<p class="fragment">2. STUN / TURN 서버 (선택)</p>
 						<p class="fragment">3. Media 서버 (선택)</p>
 					</section>
 					<section style="text-align: center">
-						<h4>Web RTC 단점 2</h4>
+						<h3>Web RTC 단점 2</h3>
 						<p class="fragment">브라우저 호환성</p>
-						<p class="fragment">1. IE8,9,10 미지원, Safari 미지원</p>
+						<p class="fragment">1. IE8,9,10 미지원</p>
 						<p class="fragment">※ Edge의 경우 WebRTC와 호환되는 ORTC지원</p>
+						<p class="fragment">※ Safari의 경우 11버전 부터 지원</p>
 					</section>
 				</section>
 				<section>
 					<section style="text-align: center">
-						<h4>Web RTC 단점</h4>
-						<p class="fragment">Signaling 서버 (필요)</p>
-						<p class="fragment">STUN / TURN 서버 (선택)</p>
-						<p class="fragment">IE8,9,10 미지원, Safari 미지원</p>
+						<h2>Web RTC 흐름도</h2>
+					</section>
+					<section style="text-align: center">
+						<h3>흐름도</h3>
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h2>Web RTC 구성 요소 1</h2>
+						<h3>서버</h3>
+					</section>
+					<section style="text-align: center">
+						<p class="fragment">Signaling 서버</p>
+						<p class="fragment"><small>브라우저간 미디어 통신에 필요한 메타데이터를 주고 받게 해주는 서버</small></p>
+						<p class="fragment"><small>Web RTC 에는 구체적인 스펙 존재(X)</small></p>
+						<p class="fragment"><small>통신방법은 자유, 양 방향 간에 데이터만 교환이 가능하면 된다.</small></p>
+					</section>
+					<section style="text-align: center">
+						<p class="fragment">STUN 서버</p>
+						<p class="fragment">Simple Traversal of Utilities for NAT</p>
+						<p class="fragment"><small>클라이언트의 NAT/방화벽 유무</small></p>
+						<p class="fragment"><small>클라이언트의 NAT 종류</small></p>
+						<p class="fragment"><small>클라이언트에 접근 가능한 외부 Public IP/Port 탐색</small></p>
+					</section>
+					<section style="text-align: center">
+						<p class="fragment">TURN 서버</p>
+						<p class="fragment">Traversal Using Relays around NAT</p>
+						<p class="fragment"><small>Peer 간 직접 통신이 실패 할 경우 데이터 Relay 수행</small></p>
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h2>Web RTC 구성 요소 2</h2>
+						<h3>클라이언트</h3>
+					</section>
+					<section style="text-align: center">
+						<h4>브라우저 WebRTC API</h4>
+						<p class="fragment"><small>getUserMedia()</small></p>
+						<p class="fragment"><small>RTCPeerConnection</small></p>
+						<p class="fragment"><small>RTCDataChannel</small></p>
+					</section>
+					<section style="text-align: center">
+						<h4>navigator.getUserMedia()</h4>
+						<p class="fragment">브라우저를 사용중인 단말기의 카메라, 오디오 스트림을 받아온다.</p>
+						<p class="fragment">HTTPS 에서만 동작 가능</p>
+					</section>
+					<section style="text-align: center">
+						<h4>RTCPeerConnection</h4>
+						<p class="fragment">Remote Peer와 통신 연결을 담당하는 객체</p>
+						<p class="fragment">비디오/오디오 스트림에 대한 SDP 생성 및 등록</p>
+						<p class="fragment">통신 가능한 ICE Candiate를 교환</p>
+					</section>
+					<section style="text-align: center">
+						<h4>RTCDataChannel</h4>
+						<p class="fragment">Peer간 양방향 데이터를 교환하게 해주는 객체</p>
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h2>Web RTC 상세 흐름도</h2>
+					</section>
+					<section style="text-align: center">
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h2>Web RTC 환경 구축</h2>
+					</section>
+					<section style="text-align: center">
+						<h3>Web Server & Web Client</h3>
+						<p>nginx</p>
+						<p>demo page</p>
+						<p><small>AWS EC2 인스턴스에서 구동</small></p>
+						<p><small>https://ec2-13-125-27-27.ap-northeast-2.compute.amazonaws.com</small></p>
+					</section>
+					<section style="text-align: center">
+						<h3>Signal 서버</h3>
+						<p>Socket.IO/WebSocket 를 이용한 직접 개발</p>
+						<p><small>AWS EC2 인스턴스에서 구동</small></p>
+					</section>
+					<section style="text-align: center">
+						<h3>STUN 서버</h3>
+						<p>Google의 Public STUN 서버 사용</p>
+						<p><small>(중국에서 사용불가)</small></p>
+						<p><small>stun.l.google.com:19302</small></p>
+						<p><small>stun1.l.google.com:19302</small></p>
+					</section>
+					<section style="text-align: center">
+						<h3>TURN 서버</h3>
+						<p>오픈 소스 TURN 서버 <a href="https://github.com/coturn/coturn">coturn</a></p>
+						<p><small>AWS EC2 인스턴스에서 구동</small></p>
+						<p><small>turn:ec2-13-125-27-27.ap-northeast-2.compute.amazonaws.com</small></p>
+					</section>
+					<section style="text-align: center">
+						<h3>Web RTC 서버 환경 구성도</h3>
+						<img src="images/webrtc-infra.png">
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h2>Web RTC 데모</h2>
+					</section>
+					<section style="text-align: center">
+						<a href="https://ec2-13-125-27-27.ap-northeast-2.compute.amazonaws.com">Web RTC 데모(Chrome)</a>
+						<img src="images/demo.png" width="640" height="420">
 					</section>
 				</section>
 				<section style="text-align: left;">
