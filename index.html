@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>H.264 표준화 배경</title>
+		<title>Web RTC</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -24,249 +24,63 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-					<h4>Chapter3</h4>
-					<h3>H.264/AVC 어떻게 표준화 되었나?</h3>
+				<section style="text-align: center">
+					<h1>Web RTC</h1>
 				</section>
 				<section>
-					<section>
-						<h4>Subject 1</h4>
-						<h2>H.264/AVC란?</h2>
+					<section style="text-align: center">
+						<h3>Web RTC란?</h3>
 					</section>
-					<section>
-						<p>ITU-T 와 MPEG 에서 </p>
-						<p class="fragment">JVT(Joint Video Team)을 구성하여</p>
-						<p class="fragment">함께 제안한</p>
-						<p class="fragment">동영상 압축부호화 표준</p>
+					<section style="text-align: center">
+						<p>Web Real Time Communication</p>
 					</section>
-				</section>
-				<section>
-					<section>
-						<h2>ITU-T란?</h2>
-						<p class="fragment">UN 산하</p>
-						<p class="fragment">국제통신연합의 전기통신표준화부문</p>
-					</section>
-					<section>
-						<p class="fragment">실시간 통신기술 표준화 진행</p>
-						<p class="fragment">H.261, H.262, H.263</p>
+					<section style="text-align: center">
+						<p>Web Browser간 P2P 통신이 가능하게 해주는 기술</p>
+						<p class="fragment">2013년 Google이 W3C에 처음 제안</p>
 					</section>
 				</section>
 				<section>
-					<section>
-						<h2>MPEG이란?</h2>
-						<p class="fragment">ISO 산하</p>
-						<p class="fragment">동영상 전문가 집단</p>
+					<section style="text-align: center">
+						<h3>Web RTC로 가능한 모든것</h3>
 					</section>
-					<section>
-						<p class="fragment">멀티미디어 저장기술 표준화 진행</p>
-						<p class="fragment">MPEG-1, MPEG-2, MPEG-3/4</p>
-					</section>
-				</section>
-				<section>
-					<h4>Subject 2</h4>
-					<h2>H.264/AVC 탄생배경</h2>
-				</section>
-				<section>
-					<section>
-						<h5>H.264/AVC 탄생 직전</h5>
-						<h2>ITU-T의 행방?</h2>
-					</section>
-					<section>
-						<p class="fragment">H.263대비 1/2 비트율, 동일한 화질의 목표</p>
-						<p class="fragment">H.26L (Long term) 프로젝트를 진행</p>
+					<section style="text-align: center">
+						<p>Live 미디어 서비스</p>
+						<p class="fragment">VOD 미디어 서비스</p>
+						<p class="fragment">실시간 채팅</p>
+						<p class="fragment">파일전송</p>
 					</section>
 				</section>
 				<section>
-					<section>
-						<h5>H.264/AVC 탄생 직전</h5>
-						<h2>MPEG의 행방?</h2>
+					<section style="text-align: center">
+						<h3>Web RTC 특징</h3>
 					</section>
-					<section>
-						<p class="fragment">MPEG-4 버전4 완성 이후..</p>
-						<p class="fragment">여러 회사에서</p>
-						<p class="fragment">더 좋은 부호화 방법들을 제안 받음</p>
+					<section style="text-align: center">
+						<h4>Web RTC 장점</h4>
+						<p class="fragment">별도의 플러그인 없이 미디어 통신 가능</p>
+						<p class="fragment">ActiveX / NPAPI / PPAPI 미사용 </p>
+						<p class="fragment">1. 보안 이슈 X</p>
+						<p class="fragment">2. 플러그인 유지 보수 X</p>
 					</section>
-					<section>
-						<p class="fragment">ITU-T 또한 H.26L을 제안</p>
-						<p class="fragment">MPEG-4 Part2의 ASP 기준 방식 대비</p>
-						<p class="fragment">2배 좋은 효율 달성</p>
+					<section style="text-align: center">
+						<h4>Web RTC 단점 1</h4>
+						<p class="fragment">별도의 서버 운영 필요</p>
+						<p class="fragment">1. Signaling 서버 (필요)</p>
+						<p class="fragment">2. STUN / TURN 서버 (선택)</p>
+						<p class="fragment">3. Media 서버 (선택)</p>
 					</section>
-					<section>
-						<p class="fragment">이밖에...</p>
-						<p class="fragment">다음 표준화를 진행할 수 없을 정도로 </p>
-						<p class="fragment">Video Expert의 그룹 이탈</p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h4>H.264/AVC 탄생의</h4>
-						<h2>시발점</h2>
-					</section>
-					<section>
-						<p>Microsoft</p>
-						<h2>Gary Sullivan</h2>
-						<p class="fragment">ITU-T 회장 <span class="fragment">& MPEG 의장 임명</span></p>
-					</section>
-					<section>
-						<p class="fragment">ITU-T + MPEG</p>
-						<h2 class="fragment">JVT</h2>
-						<p class="fragment">결성</p>
+					<section style="text-align: center">
+						<h4>Web RTC 단점 2</h4>
+						<p class="fragment">브라우저 호환성</p>
+						<p class="fragment">1. IE8,9,10 미지원, Safari 미지원</p>
+						<p class="fragment">※ Edge의 경우 WebRTC와 호환되는 ORTC지원</p>
 					</section>
 				</section>
 				<section>
-					<h4>Subject 3</h4>
-					<h2>JVT 목표, 일정, 범위</h2>
-				</section>
-				<section>
-					<section>
-						<h2>JVT 목표</h2>
-					</section>
-					<section>
-						<p class="fragment">비디오 코덱의 Decoder 부분만 규격 지정</p>
-						<p class="fragment">Encoder, Renderer 자유롭게 남겨둠</p>
-					</section>
-					<section>
-						<h4>MPEG-2/4대비 2배 이상 효율 개선</h4>
-						<p class="fragment">HD영상 10Mbps 목표</p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>JVT 표준화 범위</h2>
-					</section>
-					<section>
-						<p class="fragment">해상도 : SQCIF 에서 4K</p>
-						<p class="fragment">컬러 포맷 : 4:2:0 </p>
-						<p class="fragment">입력 비트열 단위 : 8bit </p>
-						<p class="fragment">주사 방식 : Interlace, Progressive </p>
-					</section>
-					<section>
-						<p class="fragment">네트워크 친화적</p>
-						<p class="fragment">에러 내성</p>
-						<p class="fragment">통신계, 저장계 응용시스템 모두 지원</p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2>JVT 일정</h2>
-					</section>
-					<section>
-						<p class="fragment">2002년 초 최초 Draft 발표</p>
-						<p class="fragment">2003년 초 국제표준 재정</p>
-					</section>
-				</section>
-				<section>
-					<h4>Subject 4</h4>
-					<h2>JVT 라이센스</h2>
-				</section>
-				<section>
-					<section>
-						<p>Microsoft</p>
-						<h2>Gary Sullivan</h2>
-						<p class="fragment">IPR(지적재산원) 선언 의무화</p>
-					</section>
-					<section>
-						<h3>IPR(지적재산권) 종류</h3>
-						<p class="fragment">1. 특허가 아니다.</p>
-						<p class="fragment">2. 특허가 있다. 허락 X</p>
-						<p class="fragment">3. 특허가 있다. 무료다.</p>
-						<p class="fragment">
-							4. 특허가 있다. 유료다. <br>
-							차별없이 합리적이다.(RAND) <br></p>
-						<p class="fragment">4.1다른 멤버가 동의하는 경우, 무료다.</p>
-					</section>
-					<section>
-						<h3>특허</h3>
-						<h2>유료화 vs 무료화</h2>
-					</section>
-					<section>
-						<h3>특허 유료파</h3>
-						<p class="fragment">높은 부호화를 위해선 특허 기술 반드시 필요</p>
-						<p class="fragment">라이센스 취득 및 관리를 위해 운영 기구 필요</p>
-					</section>
-					<section>
-						<h3>특허 무료파</h3>
-						<p class="fragment">신속한 H.264/AVC 보급</p>
-						<p class="fragment">보급에 시간을 소요하게 만드는 운영 기구 불필요</p>
-					</section>
-					<section>
-						<h2>IRP 회의 개최</h2>
-						<p class="fragment">응용시스템에 신속한 보급을 위하여</p>
-						<p class="fragment">라이센스 결정권한을 응용시스템 업계로 위임</p>
-					</section>
-					<section>
-						<h2>응용 시스템 업계 의견</h2>
-						<p class="fragment">별도의 라이센스 관리 기관 2군대 설립</p>
-						<p class="fragment">MPEG-LA, Via Licensing Pool</p>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h4>Subject 5</h4>
-						<h2>JVT 제안 기술 테스트</h2>
-					</section>
-					<section>
-						<h2>제안 기술에 대한 검증</h2>
-						<p class="fragment">1. 참조 소프트웨어(앵커) 제공</p>
-						<p class="fragment">2. 앵커를 기반으로 제안 기술 구현</p>
-						<p class="fragment">3. 공통 실험 조건에서 테스트</p>
-						<p class="fragment">4. RD곡선 분석</p>
-					</section>
-					<section>
-						<h2>참조 소프트웨어</h2>
-						<p class="fragment">H.264/AVC용, JM Software</p>
-						<p class="fragment">Encoder, Decoder 탑재</p>
-						<p class="fragment">YUV파일 -> 264파일로 변환</p>
-						<p class="fragment">결과 보고서 출력</p>
-					</section>
-					<section>
-						<h2>공통 실험 조건</h2>
-						<p>시퀀스들로 구성</p>
-						<table>
-							<thead>
-							<tr>
-								<th>시퀀스</th>
-								<th>해상도</th>
-								<th>프레임수/초(FPS)</th>
-							</tr>
-							</thead>
-							<tbody>
-							<tr>
-								<td>F1 Car</td>
-								<td>720x576</td>
-								<td>25</td>
-							</tr>
-							<tr>
-								<td>Bootball</td>
-								<td>720x480</td>
-								<td>30</td>
-							</tr>
-							<tr>
-								<td>Canoa Valesia</td>
-								<td>720x480</td>
-								<td>25</td>
-							</tr>
-							</tbody>
-						</table>
-					</section>
-					<section>
-						<h3>RD곡선</h3>
-						<p>Rate-Distortion 곡선</p>
-						<p><img src="images/PSNR-Bitrate.png" style="background: transparent;"></p>
-						<p>가로: Bitrate, 세로: PSNR-Y</p>
-						<p>Bitrate 변화에 따른, 화질 손실 정보</p>
-					</section>
-					<section>
-						<h3>BD-Bitrate</h3>
-						<p>X축 방향으로 평가</p>
-						<p><img src="images/BD-Bitrate.png" style="background: transparent;"></p>
-						<p>동일한 PSNR-Y 대비 작은량의 Bitrate값 사용</p>
-					</section>
-					<section>
-						<h3>BD-PSNR</h3>
-						<p>Y축 방향으로 평가</p>
-						<p><img src="images/BD-PSNR.png" style="background: transparent;"></p>
-						<p>동일한 Bitrate 대비 좋은 PNSR-Y</p>
+					<section style="text-align: center">
+						<h4>Web RTC 단점</h4>
+						<p class="fragment">Signaling 서버 (필요)</p>
+						<p class="fragment">STUN / TURN 서버 (선택)</p>
+						<p class="fragment">IE8,9,10 미지원, Safari 미지원</p>
 					</section>
 				</section>
 				<section style="text-align: left;">
