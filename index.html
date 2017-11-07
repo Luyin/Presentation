@@ -72,16 +72,16 @@
 						<h3>Web RTC 단점 2</h3>
 						<p class="fragment">브라우저 호환성</p>
 						<p class="fragment">1. IE8,9,10 미지원</p>
-						<p class="fragment">※ Edge의 경우 WebRTC와 호환되는 ORTC지원</p>
-						<p class="fragment">※ Safari의 경우 11버전 부터 지원</p>
+						<p class="fragment">2. Safari 9, 10버전 미지원</p>
+						<p class="fragment">3. Edge의 경우 WebRTC와 호환되는 ORTC지원</p>
 					</section>
 				</section>
 				<section>
 					<section style="text-align: center">
-						<h2>Web RTC 흐름도</h2>
+						<h2>Web RTC 시스템 구성도</h2>
 					</section>
 					<section style="text-align: center">
-						<h3>흐름도</h3>
+						<img src="images/system.PNG">
 					</section>
 				</section>
 				<section>
@@ -101,11 +101,13 @@
 						<p class="fragment"><small>클라이언트의 NAT/방화벽 유무</small></p>
 						<p class="fragment"><small>클라이언트의 NAT 종류</small></p>
 						<p class="fragment"><small>클라이언트에 접근 가능한 외부 Public IP/Port 탐색</small></p>
+						<img src="images/stun.PNG">
 					</section>
 					<section style="text-align: center">
 						<p class="fragment">TURN 서버</p>
 						<p class="fragment">Traversal Using Relays around NAT</p>
 						<p class="fragment"><small>Peer 간 직접 통신이 실패 할 경우 데이터 Relay 수행</small></p>
+						<img class="fragment" src="images/turn.PNG">
 					</section>
 				</section>
 				<section>
@@ -140,6 +142,34 @@
 						<h2>Web RTC 상세 흐름도</h2>
 					</section>
 					<section style="text-align: center">
+						<h3>STEP 1</h3>
+						<p>영상 스트림 획득</p>
+						<img src="images/step1.PNG">
+					</section>
+					<section style="text-align: center">
+						<h3>STEP 2</h3>
+						<p>통신 준비 완료</p>
+						<img src="images/step2.PNG">
+					</section>
+					<section style="text-align: center">
+						<h3>STEP 3</h3>
+						<p>SDP교환</p>
+						<img src="images/step3.PNG">
+					</section>
+					<section style="text-align: center">
+						<h3>STEP 4</h3>
+						<p>ICE Candidate 수신</p>
+						<img src="images/step4.PNG">
+					</section>
+					<section style="text-align: center">
+						<h3>STEP 5</h3>
+						<p>ICE Candidate 교환</p>
+						<img src="images/step5.PNG">
+					</section>
+					<section style="text-align: center">
+						<h3>STEP 6</h3>
+						<p>접속</p>
+						<img src="images/step6.PNG">
 					</section>
 				</section>
 				<section>
@@ -148,8 +178,7 @@
 					</section>
 					<section style="text-align: center">
 						<h3>Web Server & Web Client</h3>
-						<p>nginx</p>
-						<p>demo page</p>
+						<p>nginx & demo page</p>
 						<p><small>AWS EC2 인스턴스에서 구동</small></p>
 						<p><small>https://ec2-13-125-27-27.ap-northeast-2.compute.amazonaws.com</small></p>
 					</section>
