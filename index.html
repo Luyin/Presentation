@@ -98,6 +98,29 @@
 						<h2>2. Bridge Pattern</h2>
 					</section>
 					<section style="text-align: center">
+						<p>2개의 구체 클래스 간의 강한 결합을 제거하는 패턴</p>
+						<p>(분기 안에 분기가 있는 경우 사용)</p>
+					</section>
+					<section style="text-align: center">
+						<h2>여러 개의 유닛: 전사, 궁수</h2>
+						<h2>여러 개의 무기: 칼, 활</h2>
+						<p>전사가 칼을 사용하는 경우 구현</p>
+						<p>궁수가 칼을 사용하는 경우 구현</p>
+						<p>유닛 추가 될 때마다 칼을 사용 기능을 모두 구현 해야 하나??</p>
+					</section>
+					<section style="text-align: center">
+						<img src="images/class-adapter.gif" width="840" height="260">
+						<p>구현 클래스에서 추상 개념을 분리하여 서로 독립적으로 변화 할 수 있도록 함 </p>
+						<p>각각 인터페이스로 분리 (Abstraction, Implementor)</p>
+					</section>
+					<section style="text-align: center">
+						<h2>특징</h2>
+						<p>런타임에 칼 또는 활 선택 가능 (구현 클래스 선택 가능)</p>
+						<p>새로운 유닛 추가시 안전함 (서로 영향을 주지 않음)</p>
+					</section>
+					<section style="text-align: center">
+						<h2>관련 클래스</h2>
+						<p>Abstract Factory 패턴과 자주 같이 사용된다.</p>
 					</section>
 				</section>
 				<section>
