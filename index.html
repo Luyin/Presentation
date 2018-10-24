@@ -26,167 +26,44 @@
 			<div class="slides">
 				<section>
 					<section style="text-align: center">
+						<h1>Creational Pattern</h1>
+					</section>
+					<section style="text-align: center">
+						<h1>contents</h1>
+						<p>1. Object Pool</p>
+						<p>2. Multiton</p>
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
 						<h1>Structural Pattern</h1>
 					</section>
 					<section style="text-align: center">
-						<p>작은 클래스들을 합성하여</p> 
-						<p>더 큰 구조의 클래스를 형성하는데 사용되는 패턴</p>
+						<h1>contents</h1>
+						<p>1. Data Mapper</p>
+						<p>2. Fluent Interface</p>
+						<p>3. Registry</p>
 					</section>
 				</section>
 				<section>
+					<section style="text-align: center">
+						<h1>Behavioral Pattern</h1>
+					</section>
 					<section style="text-align: center">
 						<h1>contents</h1>
-						<p>1. Adapter Pattern</p>
-						<p>2. Bridge Pattern</p>
-						<p>3. Composite Pattern</p>
-						<p>4. Decorator Pattern</p>
+						<p>1. Null Object</p>
+						<p>2. Specification</p>
 					</section>
 				</section>
 				<section>
 					<section style="text-align: center">
-						<h2>1. Adapter Pattern</h2>
+						<h1>More</h1>
 					</section>
 					<section style="text-align: center">
-						<p>서로 다른 인터페이스를 가진 클래스들이</p>
-						<p>호환될 수 있도록 맞춰주는 패턴</p>
-					</section>
-					<section style="text-align: center">
-						<h2>화면에 그림을 그려주는 클래스</h2>
-						<p class="fade-in-then-fade-out">
-							<p>Pen 클래스의 그리는 함수: draw()</p>
-							<p >Paint 클래스의 그리는 함수: paint()</p>
-						</p>
-						<h3 class="fragment fade-in">공통 인터페이스 render()</h3>
-					</section>
-					<section style="text-align: center">
-						<h2>Class Adapter</h2>
-						<p>상속을 사용한 Adapter 구현</p>
-					</section>
-					<section style="text-align: center">
-						<img src="images/class-adapter.gif" width="840" height="260">
-						<p>Adaptee 클래스를 상속받아서 사용</p>
-					</section>
-					<section style="text-align: center">
-						<h2>장점</h2>
-						<p>Pen 의 기능을 재 정의 할 수 있다.</p>
-					</section>
-					<section style="text-align: center">
-						<h2>단점</h2>
-						<p>Pen, Paint, Spray.. 여러 개일 경우? 다중 상속?</p>
-						<p>Black Pen, Highlight Pen.. Pen의 세부 클래스가 있을 경우 사용 불가</p>
-					</section>
-					<section style="text-align: center">
-						<h2>Object Adapter</h2>
-						<p>객체 합성을 사용한 Adapter 구현</p>
-					</section>
-					<section style="text-align: center">
-						<img src="images/object-adapter.gif" width="840" height="260">
-						<p>Adaptee 객체를 Refer 하고 있다.</p>
-					</section>
-					<section style="text-align: center">
-						<h2>장점</h2>
-						<p>Pen, Paint, Spray등 여러 개의 사용 가능</p>
-						<p>Pen을 상속하는 Black Pen, Highlight Pen 모두 사용 가능</p>
-					</section>
-					<section style="text-align: center">
-						<h2>단점</h2>
-						<p>Pen의 기능 재정의 불가능</p>
-					</section>
-				</section>
-				<section>
-					<section style="text-align: center">
-						<h2>2. Bridge Pattern</h2>
-					</section>
-					<section style="text-align: center">
-						<p>2개의 구체 클래스 간의 강한 결합을 제거하는 패턴</p>
-						<p>(분기 안에 분기가 있는 경우 사용)</p>
-					</section>
-					<section style="text-align: center">
-						<h2>여러 개의 유닛: 전사, 궁수</h2>
-						<h2>여러 개의 무기: 칼, 활</h2>
-						<p>전사가 칼을 사용하는 경우 구현</p>
-						<p>궁수가 칼을 사용하는 경우 구현</p>
-						<p>유닛 추가 될 때마다 칼을 사용 기능을 모두 구현 해야 하나??</p>
-					</section>
-					<section style="text-align: center">
-						<img src="images/class-adapter.gif" width="840" height="260">
-						<p>구현 클래스에서 추상 개념을 분리하여 서로 독립적으로 변화 할 수 있도록 함 </p>
-						<p>각각 인터페이스로 분리 (Abstraction, Implementor)</p>
-					</section>
-					<section style="text-align: center">
-						<h2>특징</h2>
-						<p>런타임에 칼 또는 활 선택 가능 (구현 클래스 선택 가능)</p>
-						<p>새로운 유닛 추가시 안전함 (서로 영향을 주지 않음)</p>
-					</section>
-					<section style="text-align: center">
-						<h2>관련 클래스</h2>
-						<p>Abstract Factory 패턴과 자주 같이 사용된다.</p>
-					</section>
-				</section>
-				<section>
-					<section style="text-align: center">
-						<h2>3. Composite Pattern</h2>
-					</section>
-					<section style="text-align: center">
-						<p>개별 객체와 복합 객체를</p>
-						<p>동일하게 다루게 해주는 패턴</p>
-					</section>
-					<section style="text-align: center">
-						<p>마린 1마리를 이동할 때</p>
-						<p>마린 1부대를 한꺼번에 이동할 때</p>
-					</section>
-					<section style="text-align: center">
-						<img src="images/composite-pattern.png">
-						<p>개별 객체와 복합 객체간의</p>
-						<p>공통인터페이스를 추출하여 사용</p>
-					</section>
-					<section style="text-align: center">
-						<h2>구현 고려 사항</h2>
-						<p>사용자 입장에서는 Leaf와 Composite 간에 구분 할수 없어야 한다.</p>
-						<p>Composite객체의 자식요소를 보관하는 자료구조는 자유: List, HashMap, etc..</p>
-						<p>Composite객체의 자식요소들에 순서가 있을 수 있다.</p>
-						<p>Composite객체의 자식요소를 관리하는 기능이 있다. (add, remove)</p>
-					</section>
-				</section>
-				<section>
-					<section style="text-align: center">
-						<h2>4. Decorator Pattern</h2>
-					</section>
-					<section style="text-align: center">
-						<p>상속을(정적) 사용하지 않고 </p>
-						<p>동적으로 새로운 동작을 추가하는 방법</p>
-					</section>
-					<section style="text-align: center">
-						<p>일반 공격에 얼음 데미지를 추가하고 싶다.</p>
-					</section>
-					<section style="text-align: center">
-						<img src="images/decorater-pattern.png">
-						<p>Decorator는 동일한 Interface를 사용한다.</p>
-					</section>
-					<section style="text-align: center">
-						<h2>장점</h2>
-						<p>프로그램 개발시 처음 부터 모든 기능을 구현할 필요 없다.</p>
-					</section>
-				</section>
-				<section>
-					<section style="text-align: center">
-						<h2>5. Facade Pattern</h2>
-					</section>
-					<section style="text-align: center">
-						<p>복잡한 서브시스템의 동작을 숨기고 단순한 인터페이스를 제공하는 패턴</p>
-					</section>
-					<section style="text-align: center">
-						<h2>피자를 만들다</h2>
-						<p>반죽</p>
-						<p>토핑</p>
-						<p>굽기</p>
-					</section>
-					<section style="text-align: center">
-						<img src="images/facade-pattern.png">
-						<p>특별한 구조는 없다.</p>
-					</section>
-					<section style="text-align: center">
-						<h2>이걸 왜 굳이 패턴이라고 하는지 잘 모르겠다...</h2>
+						<h1>contents</h1>
+						<p>1. Delegation</p>
+						<p>2. Service Locator</p>
+						<p>3. Repository</p>
 					</section>
 				</section>
 				<section style="text-align: left;">
