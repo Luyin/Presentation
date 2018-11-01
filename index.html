@@ -81,17 +81,159 @@
 				</section>
 				<section>
 					<section style="text-align: center">
-						<h4>Creational Pattern</h4>
-						<h2>2. Multiton Pattern</h2>
+						<h4>Structural Pattern</h4>
+						<h2>1. Data Mapper</h2>
 					</section>
 					<section style="text-align: center">
-						<h6>형태</h6>
-						<p>싱클턴 패턴의 확장판</p>
-						<p>1개가 아닌 n개의 인스턴스를 관리</p>
+						<h2>형태</h2>
+					</section>
+					<section style="text-align: center">
+						<!--<p>Architecture Pattern 이다.</p>-->
+						<p>CURD Interface 제공</p>
+						<p>e.g) create, update, read, delete</p>
+					</section>
+					<section style="text-align: center">
+						<p>SQL을 실행</p>
+						<p>지정한 Object로 결과 전달</p>
 					</section>
 					<section style="text-align: center">
 						<h6>용도</h6>
-						<p>로드 밸런스가 n개의 서버 중, 사용 가능한 한개의 서버를 반환하는 경우</p>
+						<p>Domain Layer와 Persistence Layer를 분리할 때 사용</p>
+						<p>e.g) MyBatis</p>
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h4>Structural Pattern</h4>
+						<h2>2. Fluent Interface</h2>
+					</section>
+					<section style="text-align: center">
+						<h6>형태</h6>
+						<pre style="width: 400px;">
+							<code >
+query = new Sql()
+	.select(['foo', 'bar'])
+	.from('foobar', 'f')
+	.where('f.bar = ?');
+							</code>
+						</pre>
+						<p>chaining 기법으로 구현</p>
+					</section>
+					<section style="text-align: center">
+						<h6>용도</h6>
+						<p>마치 사람이 사용하는 언어와 같이 Interface를 구현</p>
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h4>Structural Pattern</h4>
+						<h2>3. Registry</h2>
+					</section>
+					<section style="text-align: center">
+						<h6>형태</h6>
+						<p>이름을 전달하면 해당 객체를 리턴 하는 Class</p>
+						<!--<p>import를 사용하지 않고 객체를 리턴</p>-->
+					</section>
+					<section style="text-align: center">
+						<h6>용도</h6>
+						<p>어플리케이션 전역에서 사용하는 객체 로딩</p>
+						<p>e.g) Logger</p>
+					</section>
+					<section>
+						<h6>단점</h6>
+						<p>Global State를 사용하게 되는 안티패턴</p>
+						<p>DI 사용 권장</p>
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h4>Behavioral Pattern</h4>
+						<h2>1. Null Object</h2>
+					</section>
+					<section style="text-align: center">
+						<h6>형태</h6>
+						<p>인터페이스는 있지만 아무런 동작이 없는 빈 객체</p>
+					</section>
+					<section style="text-align: center">
+						<h6>용도</h6>
+						<p>undefined 객체 사용에 대한 에러 발생 방지</p>
+					</section>
+				</section>
+				<section>
+					<!-- http://sjava.net/2009/09/specification-pattern/ -->
+					<!-- http://vandbt.tistory.com/4 -->
+					<!-- 정리 잘된 사이트 -->
+					<section style="text-align: center">
+						<h4>Behavioral Pattern</h4>
+						<h2>2. Specification</h2>
+					</section>
+					<section style="text-align: center">
+						<h2>형태</h2>
+					</section>
+					<section style="text-align: center">
+						<h2>Specification</h2>
+						<p>분기 조건 검사 class</p>
+					</section>
+					<section style="text-align: center">
+						<h2>Provider</h2>
+						<p>Specification 실행 및 결과 리턴 class</p>
+					</section>
+					<section style="text-align: center">
+						<h6>용도</h6>
+						<p>if~else 를 사용하지 않고 비즈니스 로직을 확장 할때 사용</p>
+						<!--<p>모델 분기 칠때 사용(간단 설명)</p>-->
+						<!--<p>e.g) 서비스 마다 다른 해상도 지원 범위를 제공</p>-->
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h4>More</h4>
+						<h2>1. Delegation</h2>
+					</section>
+					<section style="text-align: center">
+						<h6>형태</h6>
+						<p>Decorator 패턴의 하위 분류</p>
+					</section>
+					<section style="text-align: center">
+						<h6>용도</h6>
+						<p>확장 기능 제공</p>
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h4>More</h4>
+						<h2>2. Service Locator</h2>
+					</section>
+					<section style="text-align: center">
+						<h6>형태</h6>
+						<p>Decorator 패턴의 하위 분류</p>
+					</section>
+					<section style="text-align: center">
+						<h6>용도</h6>
+						<p>마틴 파울러가 언급한 안티패턴</p>
+						<p>DI 사용 권장</p>
+					</section>
+				</section>
+				<section>
+					<section style="text-align: center">
+						<h4>More</h4>
+						<h2>3. Repository</h2>
+					</section>
+					<section style="text-align: center">
+						<h2>형태</h2>
+					</section>
+					<section style="text-align: center">
+						<img src="./images/repository.png">
+						<p>어플리케이션과 데이터 소스 사이에 중개 레이어</p>
+					</section>
+					<section style="text-align: center">
+						<h2>형태</h2>
+						<p>도메인 Layer의 interface 제공</p>
+						<p>Persistence를 실행하고 결과 리턴</p>
+					</section>
+					<section style="text-align: center">
+						<h6>용도</h6>
+						<p>DB 교체가 편리하도록 해준다</p>
 					</section>
 				</section>
 				<section style="text-align: left;">
